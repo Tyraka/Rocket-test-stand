@@ -38,6 +38,7 @@ float currentTemp;
 
 static volatile uint8_t packetStatus;
 
+boolean started = False;
 
 void NRF905_CB_RXCOMPLETE(void)
 {
@@ -64,10 +65,32 @@ void setup() {
   //Set receaver address
   // Set address of this device
   nRF905_setListenAddress(RXADDR);
+  //Change to RX mode
+  nRF905_RX();
   delay(500);
 }
 
 void loop() {
+  
+  while(!started){
+    // Wait for data
+    while(packetStatus == PACKET_NONE);
+    if(packetStatus == PACKET_OK)
+    {
+      //Reset package status
+      packetStatus = PACKET_NONE;
+
+      // Make buffer for data
+      uint8_t buffer[NRF905_MAX_PAYLOAD];
+      nRF905_read(buffer, sizeof(buffer));
+    
+      if(buffer == 'x')
+      {
+        //Change the started value
+       started = True;
+      }
+     }
+  }
   // Read temp data
   currentTemp = ktc.readCelsius(); 
   // Read thurst data
