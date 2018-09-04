@@ -1,6 +1,9 @@
+#include <string.h>
 #include <nRF905.h>
 #include "HX711.h"
 #include "max6675.h"
+
+int ledPin = 6;
 
 //thermocouples config
 // pins
@@ -38,7 +41,7 @@ float currentTemp;
 
 static volatile uint8_t packetStatus;
 
-boolean started = False;
+boolean started = false;
 
 void NRF905_CB_RXCOMPLETE(void)
 {
@@ -51,6 +54,8 @@ void NRF905_CB_RXINVALID(void)
 }
 
 void setup() {
+
+  pinMode(ledPin, OUTPUT);
   //tare the scale
   scale.set_scale(-96650);  //Calibration adjustment
   scale.tare();             //Reset the scale to 0  
@@ -71,31 +76,10 @@ void setup() {
 }
 
 void loop() {
-  
-  while(!started){
-    // Wait for data
-    while(packetStatus == PACKET_NONE);
-    if(packetStatus == PACKET_OK)
-    {
-      //Reset package status
-      packetStatus = PACKET_NONE;
-
-      // Make buffer for data
-      uint8_t buffer[NRF905_MAX_PAYLOAD];
-      nRF905_read(buffer, sizeof(buffer));
-    
-      if(buffer == 'x')
-      {
-        //Change the started value
-       started = True;
-       nRF905_TX();
-      }
-     }
-  }
   // Read temp data
   currentTemp = ktc.readCelsius(); 
   // Read thurst data
-  currentThrust = scale.get_units();
+  currentThrust = scale.get_units()*100;
   
   // Make data
   char data[NRF905_MAX_PAYLOAD] = {0};
@@ -106,17 +90,5 @@ void loop() {
 
   //Send the data (send fails if other transmissions are going on, keep trying until success) and enter RX mode on completion
   while(!nRF905_TX(TXADDR, data, sizeof(data), NRF905_NEXTMODE_RX));
-
-  uint8_t success;
-  // Wait for reply
-  uint32_t sendStartTime = millis();
-  while(1)
-  {
-    success = packetStatus;
-    if(success != PACKET_NONE)
-      break;
-    else if(millis() - sendStartTime > TIMEOUT)
-      break;
-  }
-  delay(300);
+  delay(250);
 }
