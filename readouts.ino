@@ -88,6 +88,7 @@ void loop() {
       {
         //Change the started value
        started = True;
+       nRF905_TX();
       }
      }
   }
