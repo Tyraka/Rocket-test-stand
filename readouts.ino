@@ -1,7 +1,16 @@
 #include <nRF905.h>
 #include "HX711.h"
+#include "max6675.h"
 
-//tencometer config
+//thermocouples config
+// pins
+int ktcSO = 8;
+int ktcCS = 9;
+int ktcCLK = 10;
+//???
+MAX6675 ktc(ktcCLK, ktcCS, ktcSO);
+
+//tensometer config
 //pins
 #define DOUT  46
 #define CLK  44
@@ -16,6 +25,7 @@ HX711 scale(DOUT, CLK);
 const float calibration_factor = -96650;
 
 float currentThrust;
+float currentTemp;
 
 //communication config
 #define TIMEOUT 1000
@@ -54,16 +64,18 @@ void setup() {
   //Set receaver address
   // Set address of this device
   nRF905_setListenAddress(RXADDR);
-
+  delay(500);
 }
 
 void loop() {
+  // Read temp data
+  currentTemp = ktc.readCelsius(); 
   // Read thurst data
   currentThrust = scale.get_units();
   
   // Make data
   char data[NRF905_MAX_PAYLOAD] = {0};
-  sprintf(data, "%f.2", currentThrust);
+  sprintf(data, "%d, %d", (int)currentThrust, (int)currentTemp);
 
   //Reset packet status
   packetStatus = PACKET_NONE;
@@ -82,10 +94,5 @@ void loop() {
     else if(millis() - sendStartTime > TIMEOUT)
       break;
   }
-
-  if(success == PACKET_OK)
-  {
-    
-  }
-
+  delay(300);
 }
