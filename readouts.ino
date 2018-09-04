@@ -4,9 +4,9 @@
 
 //thermocouples config
 // pins
-int ktcSO = 8;
-int ktcCS = 9;
-int ktcCLK = 10;
+int ktcSO = 11;
+int ktcCS = 12;
+int ktcCLK = 13;
 //???
 MAX6675 ktc(ktcCLK, ktcCS, ktcSO);
 
