@@ -55,7 +55,8 @@ void NRF905_CB_RXINVALID(void)
 
 void setup() {
 
-  pinMode(ledPin, OUTPUT);
+  pinMode(6,OUTPUT);
+  digitalWrite(6,LOW);
   //tare the scale
   scale.set_scale(-96650);  //Calibration adjustment
   scale.tare();             //Reset the scale to 0  
@@ -90,5 +91,33 @@ void loop() {
 
   //Send the data (send fails if other transmissions are going on, keep trying until success) and enter RX mode on completion
   while(!nRF905_TX(TXADDR, data, sizeof(data), NRF905_NEXTMODE_RX));
-  delay(250);
+
+  uint8_t success;
+  
+  uint32_t sendStartTime = millis();
+  while(1)
+  {
+    success = packetStatus;
+    if(success != PACKET_NONE)
+      break;
+     if(millis() - sendStartTime > TIMEOUT)
+      break;
+  }
+
+    // Get the ping data
+    uint8_t replyData[NRF905_MAX_PAYLOAD];
+    nRF905_read(replyData, sizeof(replyData));
+    int info = atoi((const char*) replyData);
+    
+    
+
+    if(info == 0)
+      {
+        digitalWrite(6,HIGH);
+        
+      }
+    else
+      digitalWrite(6,LOW);
+
+  delay(30);
 }
