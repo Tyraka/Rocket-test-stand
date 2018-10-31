@@ -26,7 +26,6 @@ All the code necessary for measuring the force:
 [link](https://circuits4you.com/wp-content/uploads/2016/11/hx711_datasheet_english.pdf)
 
 ##### Load cell wireing
-Not important
 | HX711 | Load cell |
 |-------|----------:|
 | E+    | white     |
