@@ -1,9 +1,0 @@
-* About
-This is project of rocket test stand electronics with measurements:
-** -  enignie thrust
-** -  enignie body temperature
-** -  nozzle temperature
-** -  combastion chember pressure
-
-
-
