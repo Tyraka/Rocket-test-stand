@@ -89,7 +89,7 @@ Save date to files
 
 ### Adapter schema
 This is the schema for all the wireing with arduino
-![alt text](https://github.com/Tyraka/Stand/blob/master/Engine%20temperature/thermocouples_schema.png)
+![alt text](https://github.com/Tyraka/Rocket-test-stand/blob/master/MicroSD%20Card%20Adapter/fritzing_bb.png)
 
 ### Adapter wireing
 | MicroSD Card Adapter | Adruino UNO Pin |
@@ -102,4 +102,4 @@ This is the schema for all the wireing with arduino
 |          GND         |        GND      |
 
 ### Arduino code
-[the necessary code is here](https://github.com/Tyraka/Rocket-test-stand/blob/master/MicroSD%20Card%20Adapter/fritzing_bb.png)
+[the necessary code is here](https://github.com/Tyraka/Rocket-test-stand/blob/master/MicroSD%20Card%20Adapter/save_to_file.ino)
