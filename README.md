@@ -83,3 +83,20 @@ Basic code for reading temperature
 
 #### Datasheet
 [link](http://henrysbench.capnfatz.com/wp-content/uploads/2015/05/MAX6675-Datasheet.pdf)
+
+## MicroSD Card Adapter
+Save date to files
+
+### Adapter schema
+This is the schema for all the wireing with arduino
+![alt text](https://github.com/Tyraka/Stand/blob/master/Engine%20temperature/thermocouples_schema.png)
+
+### Adapter wireing
+| MicroSD Card Adapter | Adruino UNO Pin |
+|----------------------|----------------:|
+|          CS          |        4        |
+|          SCK         |        13       |
+|          MOSI        |        11       |
+|          MISO        |        12       |
+|          VCC         |        5V       |
+|          GND         |        GND      |
