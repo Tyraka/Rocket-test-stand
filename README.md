@@ -79,4 +79,7 @@ You can download the necessary library here
 
 #### Arduino code
 Basic code for reading temperature
-[the necessary code is here]()
+[the necessary code is here](https://github.com/Tyraka/Rocket-test-stand/blob/master/Engine%20temperature/thermocouples_schema.png)
+
+#### Datasheet
+[link](http://henrysbench.capnfatz.com/wp-content/uploads/2015/05/MAX6675-Datasheet.pdf)
