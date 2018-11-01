@@ -100,3 +100,6 @@ This is the schema for all the wireing with arduino
 |          MISO        |        12       |
 |          VCC         |        5V       |
 |          GND         |        GND      |
+
+### Arduino code
+[the necessary code is here](https://github.com/Tyraka/Rocket-test-stand/blob/master/MicroSD%20Card%20Adapter/fritzing_bb.png)
