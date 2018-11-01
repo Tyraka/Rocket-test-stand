@@ -63,7 +63,7 @@ We measure temperature of the combustion chember and nozzle using termocapules. 
 
 #### Thermocouples schema
 This is the schema for all the wireing with arduino
-![alt text](https://github.com/Tyraka/thermocouples/blob/master/thermocouples_schema.png "Logo Title Text 1")
+![alt text]()
 
 #### Pinns functions:
 - **SO:** Serial output, arduino reads output from this
