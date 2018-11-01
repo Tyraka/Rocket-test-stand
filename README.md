@@ -83,4 +83,3 @@ Basic code for reading temperature
 
 #### Datasheet
 [link](http://henrysbench.capnfatz.com/wp-content/uploads/2015/05/MAX6675-Datasheet.pdf)
-dfsdfdsf
