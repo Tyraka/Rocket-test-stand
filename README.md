@@ -63,7 +63,7 @@ We measure temperature of the combustion chember and nozzle using termocapules. 
 
 #### Thermocouples schema
 This is the schema for all the wireing with arduino
-![alt text](https://github.com/Tyraka/thermocouples/blob/master/thermocouples_schema.png "Logo Title Text 1")
+![alt text]()
 
 #### Pinns functions:
 - **SO:** Serial output, arduino reads output from this
@@ -79,4 +79,7 @@ You can download the necessary library here
 
 #### Arduino code
 Basic code for reading temperature
-[the necessary code is here]()
+[the necessary code is here](https://github.com/Tyraka/Rocket-test-stand/blob/master/Engine%20temperature/thermocouples_schema.png)
+
+#### Datasheet
+[link](http://henrysbench.capnfatz.com/wp-content/uploads/2015/05/MAX6675-Datasheet.pdf)
