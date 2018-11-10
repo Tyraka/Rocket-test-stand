@@ -27,7 +27,8 @@ This is a project of rocket test stand to measure the trust and temperature of t
     + [Adapter wireing](#adapter-wireing)
     + [Arduino code](#arduino-code-2)
 
-<small><i><a  markdown-toc</a></i></small>
+<small><i><a  
+</a></i></small>
 
 
 ## Engine thrust
