@@ -13,6 +13,8 @@ This is a project of rocket test stand to measure the trust and temperature of t
 - [MicroSD Card Adapter](#MicroSD Card Adapter)
   * [Arduino code](##Arduno code)
 
+<!-- toc -->
+
 ## Engine thrust
 We mesure thrust using load-cell. To amplify analog sygnal from load-cell we use amplifer - HX711
 
