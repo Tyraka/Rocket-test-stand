@@ -27,7 +27,7 @@ This is a project of rocket test stand to measure the trust and temperature of t
     + [Adapter wireing](#adapter-wireing)
     + [Arduino code](#arduino-code-2)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+<small><i><a  markdown-toc</a></i></small>
 
 
 ## Engine thrust
