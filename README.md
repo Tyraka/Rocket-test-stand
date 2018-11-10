@@ -3,6 +3,16 @@
 ## About
 This is a project of rocket test stand to measure the trust and temperature of the engine and to save the data on SD-card.
 
+- [Engine thrust](#Engine thrust)
+  * [Amplifer](##Amplifer - HX711)
+  * [Arduno code](##Arduno code)
+  * [Load cell](##Load cell)
+- [Engine temperature](#Engine temperature)
+  * [Chip - MAX 6675](##Chip - MAX6675)
+  * [Arduino code](##Arduino code)
+- [MicroSD Card Adapter](#MicroSD Card Adapter)
+  * [Arduino code](##Arduno code)
+
 ## Engine thrust
 We mesure thrust using load-cell. To amplify analog sygnal from load-cell we use amplifer - HX711
 
@@ -89,7 +99,7 @@ Save date to files
 
 ### Adapter schema
 This is the schema for all the wireing with arduino
-![alt text](https://github.com/Tyraka/Stand/blob/master/Engine%20temperature/thermocouples_schema.png)
+![alt text](https://github.com/Tyraka/Rocket-test-stand/blob/master/MicroSD%20Card%20Adapter/fritzing_bb.png)
 
 ### Adapter wireing
 | MicroSD Card Adapter | Adruino UNO Pin |
@@ -102,4 +112,4 @@ This is the schema for all the wireing with arduino
 |          GND         |        GND      |
 
 ### Arduino code
-[the necessary code is here](https://github.com/Tyraka/Rocket-test-stand/blob/master/MicroSD%20Card%20Adapter/fritzing_bb.png)
+[the necessary code is here](https://github.com/Tyraka/Rocket-test-stand/blob/master/MicroSD%20Card%20Adapter/save_to_file.ino)
