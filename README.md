@@ -28,7 +28,7 @@ This is a project of rocket test stand to measure the trust and temperature of t
     + [Arduino code](#arduino-code-2)
 
 <small><i><a  
-</></i></small>
+
 
 
 ## Engine thrust
