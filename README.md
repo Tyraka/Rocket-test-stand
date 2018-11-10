@@ -3,17 +3,32 @@
 ## About
 This is a project of rocket test stand to measure the trust and temperature of the engine and to save the data on SD-card.
 
-- [Engine thrust](##Engine thrust)
-  * [Amplifer](###Amplifer - HX711)
-  * [Arduno code](##Arduno code)
-  * [Load cell](###Load cell)
-- [Engine temperature](#Engine temperature)
-  * [Chip - MAX 6675](###Chip - MAX6675)
-  * [Arduino code](###Arduino code)
-- [MicroSD Card Adapter](##MicroSD Card Adapter)
-  * [Arduino code](###Arduno code)
+- [Rocket test stand](#rocket-test-stand)
+  * [About](#about)
+  * [Engine thrust](#engine-thrust)
+    + [Amplifer - HX711](#amplifer---hx711)
+      - [Amplifer schema](#amplifer-schema)
+      - [HX711 library](#hx711-library)
+      - [Arduino code](#arduino-code)
+      - [Datasheet](#datasheet)
+    + [Load cell](#load-cell)
+      - [Load cell wireing](#load-cell-wireing)
+      - [Basic load resistance checks](#basic-load-resistance-checks)
+  * [Engine temperature](#engine-temperature)
+    + [Chip - MAX 6675](#chip---max-6675)
+      - [Specifications](#specifications)
+      - [Thermocouples schema](#thermocouples-schema)
+      - [Pinns functions:](#pinns-functions-)
+      - [MAX6675 library](#max6675-library)
+      - [Arduino code](#arduino-code-1)
+      - [Datasheet](#datasheet-1)
+  * [MicroSD Card Adapter](#microsd-card-adapter)
+    + [Adapter schema](#adapter-schema)
+    + [Adapter wireing](#adapter-wireing)
+    + [Arduino code](#arduino-code-2)
 
-<!-- toc -->
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## Engine thrust
 We mesure thrust using load-cell. To amplify analog sygnal from load-cell we use amplifer - HX711
