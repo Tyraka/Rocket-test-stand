@@ -3,15 +3,15 @@
 ## About
 This is a project of rocket test stand to measure the trust and temperature of the engine and to save the data on SD-card.
 
-- [Engine thrust](#Engine thrust)
-  * [Amplifer](##Amplifer - HX711)
+- [Engine thrust](##Engine thrust)
+  * [Amplifer](###Amplifer - HX711)
   * [Arduno code](##Arduno code)
-  * [Load cell](##Load cell)
+  * [Load cell](###Load cell)
 - [Engine temperature](#Engine temperature)
-  * [Chip - MAX 6675](##Chip - MAX6675)
-  * [Arduino code](##Arduino code)
-- [MicroSD Card Adapter](#MicroSD Card Adapter)
-  * [Arduino code](##Arduno code)
+  * [Chip - MAX 6675](###Chip - MAX6675)
+  * [Arduino code](###Arduino code)
+- [MicroSD Card Adapter](##MicroSD Card Adapter)
+  * [Arduino code](###Arduno code)
 
 <!-- toc -->
 
